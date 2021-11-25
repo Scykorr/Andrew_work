@@ -1,3 +1,4 @@
+#!
 # https://habr.com/ru/post/585034/
 
 def data_distribution(array, cluster):
