@@ -1,5 +1,12 @@
 #!?
 # https://habr.com/ru/post/585034/
+import matplotlib.pyplot as plt
+from mpl_toolkits import mplot3d
+import numpy as np
+
+n = 2
+dim = 3
+k = 4
 
 def data_distribution(array, cluster):
 	cluster_content = [[] for i in range(k)]
@@ -23,8 +30,8 @@ def data_distribution(array, cluster):
 
 def cluster_update(cluster, cluster_content, dim):
 	k = len(cluster)
-	for i in range(k): #по i кластерам
-		for q in range(dim): #по q параметрам
+	for i in range(k):  #по i кластерам
+		for q in range(dim):  #по q параметрам
 			updated_parameter = 0
 			for j in range(len(cluster_content[i])):
 				updated_parameter += cluster_content[i][j][q]
@@ -33,7 +40,7 @@ def cluster_update(cluster, cluster_content, dim):
 			cluster[i][q] = updated_parameter
 	return cluster
 
-def clusterization(array, k):
+def clusterization (array, k,):
 	n = len(array)
 	dim = len(array[0])
 
