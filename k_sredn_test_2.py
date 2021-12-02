@@ -2,9 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 DIM = 2
-N = 20
-num_cluster = 3
-iterations = 6
+N = 100
+num_cluster = 2
+iterations = 3
 
 x = np.random.randn(N, DIM)
 y = np.zeros(N)
